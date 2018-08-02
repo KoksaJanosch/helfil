@@ -196,6 +196,7 @@ module.exports = function () {
 		return ('/blog/post/' + postSlug);
 	};
 
+
 	// might be a ghost helper
 	// used for pagination urls on blog
 	_helpers.pageUrl = function (pageNumber, options) {

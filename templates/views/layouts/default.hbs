@@ -40,7 +40,21 @@
 			<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
+		<style>
+			/* only for DESKTOP or MOBILE */
+					/* pomocí id=div-desktop / id=div-mobile */
+				@media screen and (min-width: 0px) and (max-width: 850px) {
+				#div-mobile {    display: inline;;  }
+				#div-desktop {    display: none;  }
+			}
 
+				@media screen and (min-width: 851px) and (max-width: 3000px) {
+				#div-mobile {    display: none;  }
+				#div-desktop {    display: inline;;  }
+			}
+		</style>
+
+	</head>
 
 
 	<!-- ====================================
@@ -65,85 +79,95 @@
 				</div>
 			</div>
  <!-- ================================================================== -->
+
+ <div class="collapse navbar-collapse">
+	 <ul class="nav navbar-nav navbar-left">
+			 {{# each navLinks}}
+			 <li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
+				 <a href="{{ href }}">{{ label }}</a>
+			 </li>
+		 {{/each}}
+	 </ul>
+
+ </div>
+
 			<!-- NAVBAR -->
 			<nav id="menuBar" class="navbar navbar-default lightHeader" role="navigation">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-							<span class="sr-only">Toggle navigation</span>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bootstrap mabar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
 							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="index.html"><img src="assets/img/logo-school.png" alt="Kidz School"></a>
+            </button>
+					<!-- 	<a class="navbar-brand" href="/"><img src="assets/img/logo_helfil.png" alt="MUDr. Helena Filová"></a>
+					-->
+					<div id="div-desktop" class="schoolInfo navbar-brand" style="width: 320px">
+						<h2>MUDr. Helena Filová</h2>
 					</div>
+
+					<div id="div-mobile" class="schoolInfo navbar-brand">
+						<a class="navbar-brand" href="/"><img src="assets/img/logo_helfil.png" alt="MUDr. Helena Filová"></a>
+					</div>
+
+
+				  </div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse navbar-ex1-collapse">
+
+
 						<ul class="nav navbar-nav navbar-right">
 
-
 							<li class="nav-item color-1 active">
-							        <a class="nav-link" href="#">
-													<i class="fa fa-home bg-color-1" aria-hidden="true"></i>
-												<span class="active">Home</span>
-
-											</a>
-							      </li>
-
-
-							<li class="dropdown singleDrop color-3 ">
-								<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-list-ul bg-color-3" aria-hidden="true"></i> <span>Pages</span></a>
+							 		<a class="nav-link" href="/">
+										<i class="fa fa-home bg-color-1" aria-hidden="true"></i>
+										<span class="active">Domů</span>
+									</a>
 							</li>
-
-							<li class=" dropdown megaDropMenu color-2 ">
-								<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">
-									<i class="fa fa-file-text-o bg-color-2" aria-hidden="true"></i>
-									<span>Courses</span>
-								</a>
-								</li>
-
-							<li class="dropdown singleDrop color-4 ">
-								<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-									<i class="fa fa-pencil-square-o bg-color-4" aria-hidden="true"></i>
-									<span>Store</span>
+							<li class="nav-item color-3 active">
+								<a class="nav-link" href="/pageOnas">
+									<i class="fa fa-list-ul bg-color-3" aria-hidden="true"></i>
+									<span class="active">Ordinace</span>
 								</a>
 							</li>
 
-							<li class="dropdown singleDrop color-5  ">
-								<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-									<i class="fa fa-calendar bg-color-5" aria-hidden="true"></i>
-									<span>Blog</span>
-								</a>
-							</li>
+							<li class="dropdown singleDrop color-2 active">
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+									<i class="fa fa-file-text-o bg-color-2" aria-hidden="true"></i> <span>Informace</span></a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li class=""><a href="accordion-toggles.html">Accordions &amp; Toggles</a></li>
+                  <li class=""><a href="tabs-dropdown.html">Tabs &amp; Dropdowns</a></li>
+                  <li class=" "><a href="alert-label-badges.html">Alert-Label-badges</a></li>
+                </ul>
+              </li>
 
-							<li class="dropdown singleDrop color-6 ">
-								<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-gg bg-color-6" aria-hidden="true"></i> <span>Přihlásit</span></a>
+							<li class="nav-item color-4 active">
+									<a class="nav-link" href="/pageOnas">
+										<i class="fa fa-picture-o bg-color-4" aria-hidden="true"></i>
+										<span class="active">Fotogalerie</span>
+									</a>
+							</li>
+							<li class="nav-item color-5 active">
+									<a class="nav-link" href="/pageOnas">
+											<i class="fa fa-calendar bg-color-5" aria-hidden="true"></i>
+										<span class="active">Kontakt</span>
+									</a>
+							</li>
+							<li class="nav-item color-6 active">
+							    <a class="nav-link" href="/pageOnas">
+										<i class="fa fa-gg bg-color-6" aria-hidden="true"></i>
+										<span class="active">O nás</span>
+									</a>
 							</li>
 						</ul>
-					</div>
 
-						<div class="collapse navbar-collapse">
-							<ul class="nav navbar-nav navbar-left">
-									{{# each navLinks}}
-									<li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
-										<a href="{{ href }}">{{ label }}</a>
-									</li>
-								{{/each}}
-							</ul>
-							<ul class="nav navbar-nav navbar-right">
-								{{#if user}}
-								<li><a href="/keystone/signout">Sign Out</a></li>
-								{{else}}
-								<li><a href="/keystone/signin">Sign In</a></li>
-								{{/if}}
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
+	</nav>
+
 		<div id="body">
 			<!--
 				Flash messages allow you to display once-off status messages to users, e.g. form
@@ -176,18 +200,58 @@
 			<!-- The content block should contain the body of your template's content-->
 			{{{body}}}
 		</div>
-		<div class="container">
-			<div id="footer">
-				<p>Administrace
-												{{#if user}}
-												<a href="/keystone/signout">Odhlásit se</a>
-												{{else}}
-												<a href="/keystone/signin">Přihlásit se</a>
-												{{/if}}
-											.
-							</p>
-			</div>
-		</div>
+
+<!-- ====================================
+——— FOOTER
+===================================== -->
+    <footer>
+      <!-- COLOR BAR -->
+      <div class="container-fluid color-bar clearfix">
+        <div class="row">
+          <div class="col-sm-1 col-xs-2 bg-color-1">fix bar</div>
+          <div class="col-sm-1 col-xs-2 bg-color-2">fix bar</div>
+          <div class="col-sm-1 col-xs-2 bg-color-3">fix bar</div>
+          <div class="col-sm-1 col-xs-2 bg-color-4">fix bar</div>
+          <div class="col-sm-1 col-xs-2 bg-color-5">fix bar</div>
+          <div class="col-sm-1 col-xs-2 bg-color-6">fix bar</div>
+          <div class="col-sm-1 bg-color-1 hidden-xs">fix bar</div>
+          <div class="col-sm-1 bg-color-2 hidden-xs">fix bar</div>
+          <div class="col-sm-1 bg-color-3 hidden-xs">fix bar</div>
+          <div class="col-sm-1 bg-color-4 hidden-xs">fix bar</div>
+          <div class="col-sm-1 bg-color-5 hidden-xs">fix bar</div>
+          <div class="col-sm-1 bg-color-6 hidden-xs">fix bar</div>
+        </div>
+      </div>
+
+
+      <!-- COPY RIGHT -->
+      <div class="copyRight clearfix">
+				<div class="container">
+							<div class="row">
+								<div class="col-md-4 col-xs-12 col-sm-4" style="text-align:center">
+										<p>Power by KeystoneJS <br>
+											© 2016 Copyright Kidz Bootstrap Template by <a href="https://www.iamabdus.com/">Abdus</a>.
+										</p>
+								</div>
+							  <div class="col-md-4 col-xs-12 col-sm-4" style="text-align:center">
+										<b><a href="/keystone">Administrace</a></b><br>
+										{{#if user}}
+										<a href="/keystone/signout">Odhlásit se</a>
+										{{else}}
+										<a href="/keystone/signin">Přihlásit se</a>
+										{{/if}}<br>
+								</div>
+							  <div class="col-md-4 col-xs-12 col-sm-4" style="text-align:center">
+										<b>Vytvořil:</b>
+											Petr Jnaoš<br>
+											petr.janos@skaut.cz<br>
+								</div>
+							</div>
+					</div>
+      </div>
+    </footer>
+<!-- /FOOTER -->
+
 		{{!--
 			//- jQuery 1.11.3 is included by default, and required by both Bootstrap
 			//- and the KeystoneJS Content Editor. If you are not targeting IE8,

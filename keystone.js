@@ -32,6 +32,7 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+
 });
 
 // Load your project's Models
@@ -57,6 +58,7 @@ keystone.set('nav', {
 	galleries: 'galleries',
 	enquiries: 'enquiries',
 	users: 'users',
+	Pages: ['onas']
 });
 
 // Start Keystone to connect to your database and initialise the web server
