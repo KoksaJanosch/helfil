@@ -206,7 +206,7 @@
 					<div class="col-sm-3 ">
 						<a href="#ourTeam" class="sectionLink bg-color-3" id="teamLink">
 							<i class="fa fa-gg linkIcon border-color-3" aria-hidden="true"></i>
-							<span class="linkText">Ordinační hodiny</span>
+							<span class="linkText">Ordinační doba</span>
 
 							<i class="fa fa-chevron-down locateArrow" aria-hidden="true"></i>
 						</a>
@@ -214,7 +214,7 @@
 					<div class="col-sm-3">
 						<a href="#latestNews" class="sectionLink bg-color-4" id="newsLink">
 							<i class="fa fa-files-o linkIcon border-color-4" aria-hidden="true"></i>
-							<span class="linkText">Přijímáme nové pacienty!</span>
+							<span class="linkText">Přijímáme pacienty</span>
 							<i class="fa fa-chevron-down locateArrow" aria-hidden="true"></i>
 						</a>
 					</div>
@@ -232,79 +232,95 @@
 				<h2 class="wow fadeInUp">
 					<span class="shape shape-left bg-color-4"></span>
 					<span>Nástěnka</span>
-					{{# each pageOrdinace}}{{{title}}}{{/each}}
+
 					<span class="shape shape-right bg-color-4"></span>
 				</h2>
 			</div>
 
+			{{# each pageOnas}}
+					{{{description}}}
+				{{/each}}
+
+
 			<div class="row ">
 				<a href="/pageOnas">
-				<div class="col-sm-6 col-lg-4 col-xs-12">
-					<div class="media featuresContent wow fadeInUp">
-						<span class="media-left bg-color-1">
-							<i class="fa fa-graduation-cap bg-color-1" aria-hidden="true"></i>
-						</span>
-						<div class="media-body">
-							<h3 class="media-heading color-1">O nás</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+					<div class="col-sm-6 col-lg-4 col-xs-12">
+						<div class="media featuresContent wow fadeInUp">
+							<span class="media-left bg-color-1">
+								<i class="fa fa-graduation-cap bg-color-1" aria-hidden="true"></i>
+							</span>
+							<div class="media-body">
+								<h3 class="media-heading color-1">O nás</h3>
+								<p>Poznejte nás lépe! MUDr. Heleny Filová a sestra Martiny Jančová.</p>
+							</div>
 						</div>
 					</div>
-				</div></a>
-				<div class="col-sm-6 col-lg-4 col-xs-12">
-					<div class="media featuresContent wow fadeInUp">
-						<span class="media-left bg-color-2">
-							<i class="fa fa-picture-o bg-color-2" aria-hidden="true"></i>
-						</span>
-						<div class="media-body">
-							<h3 class="media-heading color-2">Fotogalerie</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+				</a>
+				<a href="/gallery">
+					<div class="col-sm-6 col-lg-4 col-xs-12">
+						<div class="media featuresContent wow fadeInUp">
+							<span class="media-left bg-color-2">
+								<i class="fa fa-picture-o bg-color-2" aria-hidden="true"></i>
+							</span>
+							<div class="media-body">
+								<h3 class="media-heading color-2">Fotogalerie</h3>
+								<p>Prostředí ordinace a čekárny si můžete prohlédnout v naší fotogalerii.</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-6 col-lg-4 col-xs-12">
-					<div class="media featuresContent wow fadeInUp">
-						<span class="media-left bg-color-3">
-							<i class="fa fa-leaf bg-color-3" aria-hidden="true"></i>
-						</span>
-						<div class="media-body">
-							<h3 class="media-heading color-3">Pro nastávající maminky</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+				</a>
+				<a href="/blog">
+					<div class="col-sm-6 col-lg-4 col-xs-12">
+						<div class="media featuresContent wow fadeInUp">
+							<span class="media-left bg-color-3">
+								<i class="fa fa-leaf bg-color-3" aria-hidden="true"></i>
+							</span>
+							<div class="media-body">
+								<h3 class="media-heading color-3">Blog</h3>
+								<p>Zajímavé články a doporučení pro nastávající maminky.</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-6 col-lg-4 col-xs-12">
-					<div class="media featuresContent wow fadeInUp">
-						<span class="media-left bg-color-4">
-							<i class="fa fa-list bg-color-4" aria-hidden="true"></i>
-						</span>
-						<div class="media-body">
-							<h3 class="media-heading color-4">Ceník výkonů &amp; služeb</h3>
-							<p>Ceník výkonů nehrazených ze zdravotního pojištění.</p>
+				</a>
+				<a href="/pageCenik">
+					<div class="col-sm-6 col-lg-4 col-xs-12">
+						<div class="media featuresContent wow fadeInUp">
+							<span class="media-left bg-color-4">
+								<i class="fa fa-list bg-color-4" aria-hidden="true"></i>
+							</span>
+							<div class="media-body">
+								<h3 class="media-heading color-4">Ceník výkonů &amp; služeb</h3>
+								<p>Ceník výkonů nehrazených ze zdravotního pojištění.</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-6 col-lg-4 col-xs-12">
-					<div class="media featuresContent wow fadeInUp">
-						<span class="media-left bg-color-5">
-							<i class="fa fa-heart bg-color-5" aria-hidden="true"></i>
-						</span>
-						<div class="media-body">
-							<h3 class="media-heading color-5">Očkování &amp; prevence</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+				</a>
+				<a href="/pageOckovani">
+					<div class="col-sm-6 col-lg-4 col-xs-12">
+						<div class="media featuresContent wow fadeInUp">
+							<span class="media-left bg-color-5">
+								<i class="fa fa-heart bg-color-5" aria-hidden="true"></i>
+							</span>
+							<div class="media-body">
+								<h3 class="media-heading color-5">Vitamínové vakcíny</h3>
+								<p>Nabízíme také doplňující vitamínové vakcíny. Pro více informací nás kontaktujte. </p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-6 col-lg-4 col-xs-12">
-					<div class="media featuresContent wow fadeInUp">
-						<span class="media-left bg-color-6">
-							<i class="fa fa-shield bg-color-6" aria-hidden="true"></i>
-						</span>
-						<div class="media-body">
-							<h3 class="media-heading color-6">GDPR</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+				</a>
+				<a href="/pageGdpr">
+					<div class="col-sm-6 col-lg-4 col-xs-12">
+						<div class="media featuresContent wow fadeInUp">
+							<span class="media-left bg-color-6">
+								<i class="fa fa-shield bg-color-6" aria-hidden="true"></i>
+							</span>
+							<div class="media-body">
+								<h3 class="media-heading color-6">GDPR</h3>
+								<p>Informace pro pacienty o zpracování osobních údájů.</p>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 		</div>
 	</section>

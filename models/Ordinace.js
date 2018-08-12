@@ -10,6 +10,10 @@ var Ordinace = new keystone.List('Ordinace', {
 
 Ordinace.add({
   title: {type: String, requried: true},
+  aktualniInformace: {type: String, requried: true},
+  dovolenaPopis: {type: String, requried: true},
+  dovolena: {type: String, requried: true},
+
   pondeliDopoledne: {type: String,requried: true},
   pondeliOdpoledne: {type: String,requried: true},
   pondeliPopis: {type: String,requried: true},
@@ -25,9 +29,12 @@ Ordinace.add({
   patekDopoledne: {type: String,requried: true},
   patekOdpoledne: {type: String,requried: true},
   patekPopis: {type: String,requried: true},
+
+
   description: {type: Types.Html, wysiwyg: true, height: 300},
   image: {type: Types.CloudinaryImage},
   publishedDate: {type: Date, default: Date.now}
 });
 
+//Ordinace.defaultColumns = 'pondeliDopoledne, pondeliOdpoledne|10%, uteryDopoledne,uteryOdpoledne,uteryPopis|20%, publishedDate|20%';
 Ordinace.register();

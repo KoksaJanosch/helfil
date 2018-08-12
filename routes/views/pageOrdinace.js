@@ -7,8 +7,10 @@ exports = module.exports = function(req, res) {
   // Set locals
   locals.section = 'ordinace';
 
+
   // Load
-  view.query('pageOrdinace', keystone.list('Ordinace').model.find());
+  locals.ordinceI = view.query('pageOrdinace', keystone.list('Ordinace').model.find());
+
 
   // Render View
   view.render('pageOrdinace');
