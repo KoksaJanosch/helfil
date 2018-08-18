@@ -52,7 +52,7 @@ exports.flashMessages = function (req, res, next) {
  */
 exports.requireUser = function (req, res, next) {
 	if (!req.user) {
-		req.flash('error', 'Please sign in to access this page.');
+		req.flash('error', 'Prosím, přihlaste se.');
 		res.redirect('/keystone/signin');
 	} else {
 		next();

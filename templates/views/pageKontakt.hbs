@@ -58,51 +58,83 @@
           </div>
         </div>
 <br>
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="homeContactContent">
-              <form action="#" method="POST" role="form">
-                <div class="row">
-                  <div class="col-sm-6 col-xs-12">
-                    <div class="form-group">
-                      <i class="fa fa-user"></i>
-                      <input type="text" class="form-control border-color-1" id="exampleInputEmail1" placeholder="Jméno a příjmení">
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-xs-12">
-                    <div class="form-group">
-                      <i class="fa fa-envelope" aria-hidden="true"></i>
-                      <input type="text" class="form-control border-color-2" id="exampleInputEmail2" placeholder="Váš email">
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-xs-12">
-                    <div class="form-group">
-                      <i class="fa fa-phone" aria-hidden="true"></i>
-                      <input type="text" class="form-control border-color-5" id="exampleInputEmail3" placeholder="Váš telefon">
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-xs-12">
-                    <div class="form-group">
-                      <i class="fa fa-book" aria-hidden="true"></i>
-                      <input type="text" class="form-control border-color-6" id="exampleInputEmail4" placeholder="Předmět zprávy">
-                    </div>
-                  </div>
-                  <div class="col-xs-12">
-                    <div class="form-group">
-                      <i class="fa fa-comments" aria-hidden="true"></i>
-                      <textarea class="form-control border-color-4" placeholder="Vaše zpráva"></textarea>
-                    </div>
-                  </div>
-                  <div class="col-xs-12">
-                    <div class="formBtnArea">
-                      <button type="submit" class="btn btn-primary">Odeslat</button>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
+
+<div class="row">
+	<div class="col-xs-12">
+		<div class="homeContactContent">
+
+			{{#if enquirySubmitted}}
+			<div class="jumbotron">
+				<h4 class="color-2"><b>Děkujeme za zprávu. Vše proběhlo v pořádku.</b></h4>
+					<button class="btn btn-primary"><a style="color: white" href="/">Domů</a></button>
+			</div>
+			{{else}}
+
+
+			<form method="post">
+				<div class="row">
+					<input type="hidden" name="action" value="contact">
+
+					<div class="col-sm-6 col-xs-12">
+						<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+							<i class="fa fa-user"></i>
+							<input type="text" name="name.full" class="form-control border-color-1" id="exampleInputEmail1" placeholder="Jméno a příjmení" value="{{formData.[name.full]}}">
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-xs-12">
+						<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+							<input type="email" name="email" class="form-control border-color-2" id="exampleInputEmail2" placeholder="Váš email" value="{{formData.email}}">
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-xs-12">
+						<div class="form-group">
+							<i class="fa fa-phone" aria-hidden="true"></i>
+							<input type="text" name="phone" class="form-control border-color-5" id="exampleInputEmail3" placeholder="Váš telefon" value="{{formData.phone}}">
+						</div>
+					</div>
+
+					<div class="col-sm-6 col-xs-12">
+						<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
+							<i class="fa fa-book" aria-hidden="true"></i>
+							<select name="enquiryType" class="form-control border-color-6">
+								<option value="">Předmět zprávy...</option>
+								{{#each enquiryTypes}}
+								<option value="{{value}}">{{label}}</option>
+								{{/each}}
+							</select>
+						</div>
+					</div>
+
+
+
+					<div class="col-xs-12">
+						<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
+							<i class="fa fa-comments" aria-hidden="true"></i>
+							<textarea name="message" class="form-control border-color-4" placeholder="Vaše zpráva">{{formData.message}}</textarea>
+						</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="formBtnArea">
+							<button type="submit" class="btn btn-primary">Odeslat</button>
+						</div>
+					</div>
+				</div>
+			</form>
+			{{/if}}
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
 
         <div class="row">
           <div class="col-xs-12">
