@@ -35,6 +35,9 @@ keystone.init({
 
 });
 
+keystone.set('cloudinary config', { cloud_name: 'janosch', api_key: '374969271443423', api_secret: 'HgAtXVTcKwvIclAaCEblyFMHMJM' });
+
+
 // Load your project's Models
 keystone.import('models');
 
