@@ -33,6 +33,7 @@ keystone.init({
 	'auth': true,
 	'user model': 'User',
 
+	'cookie secret': '2ea39d49359ed81f76ac22640af9b6e52c3d1bf3c6bd9728b8a01b16e270021f4178ea474ee53358099b8b926880836c7e60648c75d287648b2366d6fcb3a549'
 });
 
 keystone.set('cloudinary config', { cloud_name: 'janosch', api_key: '374969271443423', api_secret: 'HgAtXVTcKwvIclAaCEblyFMHMJM' });
