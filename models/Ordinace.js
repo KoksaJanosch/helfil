@@ -10,27 +10,24 @@ var Ordinace = new keystone.List('Ordinace', {
 
 Ordinace.add({
   title: {type: String, requried: true},
-  aktualniInformace: {type: Types.Html, wysiwyg: true, height: 100, requried: true},
+  aktualniInformace: {type: Types.Html, wysiwyg: true, height: 100, max: 140, requried: true},
   dovolenaPopis: {type: Types.Html, wysiwyg: true, height: 100, requried: true},
 
   pondeliDopoledne: {type: String,requried: true},
   pondeliOdpoledne: {type: String,requried: true},
-  pondeliPopis: {type: String,requried: true},
+
   uteryDopoledne: {type: String,requried: true},
   uteryOdpoledne: {type: String,requried: true},
-  uteryPopis: {type: String,requried: true},
+
   stredaDopoledne: {type: String,requried: true},
   stredaOdpoledne: {type: String,requried: true},
-  stredaPopis: {type: String,requried: true},
+
   ctvrtekDopoledne: {type: String,requried: true},
   ctvrtekOdpoledne: {type: String,requried: true},
-  ctvrtekPopis: {type: String,requried: true},
+
   patekDopoledne: {type: String,requried: true},
   patekOdpoledne: {type: String,requried: true},
-  patekPopis: {type: String,requried: true},
 
-
-  description: {type: Types.Html, wysiwyg: true, height: 300},
   image: {type: Types.CloudinaryImage},
   publishedDate: {type: Date, default: Date.now}
 });

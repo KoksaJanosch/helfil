@@ -21,8 +21,6 @@
 	——— BANNER
 	===================================== -->
 	<section class="bannercontainer bannercontainerV1">
-		<!-- todo: takhle se to dela --> 
-		{{ ordinace.aktualniInformace }} <br />
 		<div class="fullscreenbanner-container">
 			<div class="fullscreenbanner">
 				<ul>
@@ -187,39 +185,46 @@
 <!--====================================
 	——— 4 SEKCE
 	===================================== -->
-	<section class="clearfix linkSection hidden-xs">
-		<div class="sectionLinkArea hidden-xs scrolling">
+	<section class="clearfix linkSection">
+		<div class="sectionLinkArea scrolling">
 			<div class="container">
 				<div class="row">
+
 					<div class="col-sm-3">
-						<a href="/pageOrdinace" class="sectionLink bg-color-1" id="coursesLink">
+						<a href="/pageOrdinace" class="sectionLink bg-color-1">
 							<i class="fa fa-file-text-o linkIcon border-color-1" aria-hidden="true"></i>
-							<span class="linkText">Aktuální informace</span>
-							<i class="fa fa-chevron-down locateArrow" aria-hidden="true"></i>
+							<p style="padding-top:55px; font-size: 20px; color:white"><b>AKTUÁLNÍ INFORMACE</b></p>
+							<p> {{{ ordinace.aktualniInformace }}}</p>
 						</a>
 					</div>
+
 					<div class="col-sm-3 ">
 						<a href="/pageOrdinace" class="sectionLink bg-color-2" id="teamLink">
 							<i class="fa fa-gg linkIcon border-color-2" aria-hidden="true"></i>
-							<span class="linkText">Dovolená</span>
-							<i class="fa fa-chevron-down locateArrow" aria-hidden="true"></i>
+							<p style="padding-top:55px; font-size: 20px; color:white"><b>DOVOLENÁ</b></p>
+							<p> {{{ ordinace.dovolenaPopis }}}</p>
 						</a>
 					</div>
+
 					<div class="col-sm-3 ">
 						<a href="/pageOrdinace" class="sectionLink bg-color-3" id="teamLink">
 							<i class="fa fa-gg linkIcon border-color-3" aria-hidden="true"></i>
-							<span class="linkText">Ordinační doba</span>
-
-							<i class="fa fa-chevron-down locateArrow" aria-hidden="true"></i>
+							<p style="padding-top:55px; font-size: 20px; color:white"><b>ORDINAČNÍ HODINY</b></p>
+							 <p style="font-size: 15px" id="den"></p>
+							 <p style="font-size: 20px" id="dopol"></p>
+							 <p style="font-size: 20px" id="odpol"></p>
 						</a>
 					</div>
+
+
 					<div class="col-sm-3">
 						<a href="/pageOrdinace" class="sectionLink bg-color-4" id="newsLink">
 							<i class="fa fa-files-o linkIcon border-color-4" aria-hidden="true"></i>
-							<span class="linkText">Přijímáme pacienty</span>
+							<p style="padding-top:75px; font-size: 20px; color:white"><b>Přijímáme nové<br> pacienty!</b></p>
 							<i class="fa fa-chevron-down locateArrow" aria-hidden="true"></i>
 						</a>
 					</div>
+
 				</div>
 			</div>
 		</div>
@@ -239,10 +244,8 @@
 				</h2>
 			</div>
 
-			{{# each pageOnas}}
-					{{{description}}}
-				{{/each}}
-
+				<!-- todo: takhle se to dela -->
+		<!-- 		{{{ ordinace.aktualniInformace }}} <br />   -->
 
 			<div class="row ">
 				<a href="/pageOnas">
@@ -368,3 +371,56 @@
 			</div>
 		</div>
 	</div>
+
+	<script>
+	document.addEventListener('DOMContentLoaded', function() {
+	{
+				var d = new Date();
+				var weekday = new Array(7);
+				weekday[0] = "Dnes se neordinuje.";
+				weekday[1] = "{{{ ordinace.pondeliDopoledne }}}";
+				weekday[2] = "{{{ ordinace.uteryDopoledne }}}";
+				weekday[3] = "{{{ ordinace.stredaDopoledne }}}";
+				weekday[4] = "{{{ ordinace.ctvrtekDopoledne }}}";
+				weekday[5] = "{{{ ordinace.patekDopoledne }}}";
+				weekday[6] = "Dnes se neordinuje.";
+
+				var n = weekday[d.getDay()];
+				document.getElementById("dopol").innerHTML = n;
+		}
+	}, false);
+
+	document.addEventListener('DOMContentLoaded', function() {
+	{
+				var d = new Date();
+				var weekday = new Array(7);
+				weekday[0] = "&nbsp";
+				weekday[1] = "{{{ ordinace.pondeliOdpoledne }}}";
+				weekday[2] = "{{{ ordinace.uteryOdpoledne }}}";
+				weekday[3] = "{{{ ordinace.stredaOdpoledne }}}";
+				weekday[4] = "{{{ ordinace.ctvrtekOdpoledne }}}";
+				weekday[5] = "{{{ ordinace.patekOdpoledne }}}";
+				weekday[6] = "&nbsp;";
+
+				var n = weekday[d.getDay()];
+				document.getElementById("odpol").innerHTML = n;
+		}
+	}, false);
+
+	document.addEventListener('DOMContentLoaded', function() {
+	{
+				var d = new Date();
+				var weekday = new Array(7);
+				weekday[0] = "<b>NEDĚLE<b>";
+				weekday[1] = "<b>PONDĚLÍ<b>";
+				weekday[2] = "<b>ÚTERÝ<b>";
+				weekday[3] = "<b>STŘEDA<b>";
+				weekday[4] = "<b>ČTVRTEK<b>";
+				weekday[5] = "<b>PÁTEK<b>";
+				weekday[6] = "<b>SOBOTA<b>";
+
+				var n = weekday[d.getDay()];
+				document.getElementById("den").innerHTML = n;
+		}
+	}, false);
+	</script>
