@@ -5,9 +5,9 @@ exports = module.exports = function(req, res) {
   // Set locals
   //locals.section = 'onas';
 
-  locals.onas = view.query('pageOnas', keystone.list('Onas').model.find());
+  //locals.onas = view.query('pageOnas', keystone.list('Onas').model.find());
   // Load
-//  view.query('pageOnas', keystone.list('Onas').model.find());
+  view.query('pageOnas', keystone.list('Onas').model.find());
 
   // Render View
   view.render('pageOnas');
