@@ -5,13 +5,8 @@ exports = module.exports = function(req, res) {
   var locals = res.locals;
 
   // Set locals
-  locals.section = 'ordinace';
-
-
-  // Load
-  locals.ordince = view.query('pageOrdinace', keystone.list('Ordinace').model.find());
-
+  locals.section = 'soubory';
 
   // Render View
-  view.render('pageOrdinace');
+  view.render('pageSoubory');
 }
