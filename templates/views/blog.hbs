@@ -18,7 +18,7 @@
     <section class="mainContent full-width clearfix">
       <div class="container">
       	<div class="row">
-          
+
       		<div class="col-sm-12 col-md-12">
       				{{# each data.posts.results}}
       				<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
@@ -29,7 +29,8 @@
       					{{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img pull-right">{{/if}}
       					<p>{{{content.brief}}}</p>
                 <br>
-      					{{#if content.extended}}<p class="read-more" style="text-align: right"><b><a href="{{postUrl slug}}"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Číst více</a></b></p>{{/if}}
+      					{{#if content.extended}}<p class="read-more" style="text-align: right"><b><a href="{{postUrl slug}}">
+                  <br><i class="fa fa-angle-double-right" aria-hidden="true"></i>Číst více</a></b></p>{{/if}}
 
 
               </div>

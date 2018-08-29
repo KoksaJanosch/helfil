@@ -38,6 +38,7 @@ keystone.init({
 		'cookie secret': '2ea39d49359ed81f76ac22640af9b6e52c3d1bf3c6bd9728b8a01b16e270021f4178ea474ee53358099b8b926880836c7e60648c75d287648b2366d6fcb3a549'
 });
 
+
 keystone.set('cloudinary config', { cloud_name: 'janosch', api_key: '374969271443423', api_secret: 'HgAtXVTcKwvIclAaCEblyFMHMJM' });
 
 
@@ -61,9 +62,10 @@ keystone.set('routes', require('./routes'));
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
 		Ordinace: 'ordinaces',
-		Zprávy: 'enquiries',
+	//	Soubory: 'https://drive.google.com/drive/u/0/folders/1I9qVypQYlmE5sU9cddKRgFwe7X6enwSD',
 		Blog: ['posts'],
 		Správci: 'users',
+
 });
 
 // Start Keystone to connect to your database and initialise the web server
