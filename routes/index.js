@@ -45,6 +45,7 @@ exports = module.exports = function (app) {
 	app.get('/pageOrdinace', routes.views.pageOrdinace);
 	app.get('/pageOckovani', routes.views.pageOckovani);
 	app.get('/pageGdpr', routes.views.pageGdpr);
+	app.get('/pageVitamin', routes.views.pageVitamin);
 	app.all('/contact', routes.views.contact);
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
