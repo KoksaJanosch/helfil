@@ -13,6 +13,11 @@ exports = module.exports = function (req, res) {
 	locals.validationErrors = {};
 	locals.enquirySubmitted = false;
 
+
+	//Load
+	view.query('pageKontakt', keystone.list('Kontakt').model.find());
+
+
 	// On POST requests, add the Enquiry item to the database
 	view.on('post', { action: 'contact' }, function (next) {
 
@@ -33,5 +38,5 @@ exports = module.exports = function (req, res) {
 		});
 	});
 
-	view.render('contact');
+	view.render('pageKontakt');
 };
