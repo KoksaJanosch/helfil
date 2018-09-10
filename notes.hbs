@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>MUDr. Helena Filová</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+		<!-- PLUGINS CSS STYLE -->
+		<link href="assets/plugins/jquery-ui/jquery-ui.css" rel="stylesheet">
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="assets/plugins/rs-plugin/css/settings.css" rel="stylesheet" >
+		<link href="assets/plugins/selectbox/select_option1.css" rel="stylesheet">
+		<link href="assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+		<link href="assets/plugins/fancybox/jquery.fancybox.min.css" rel="stylesheet">
+		<link href="assets/plugins/isotope/isotope.css" rel="stylesheet">
+		<link href="assets/plugins/animate/animate.css" rel="stylesheet">
+
+		<!-- GOOGLE FONT -->
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Dosis:400,300,600,700' rel='stylesheet' type='text/css'>
+
+		<!-- CUSTOM CSS -->
+		<link href="assets/css/app.css" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/default.css" id="option_color">
+
+		<!-- Icons -->
+		<link rel="shortcut icon" href="assets/img/favicon.png">
+
+		{{!-- This file provides the default styling for the KeystoneJS Content Editor
+			- only renders when user is logged in and admin--}}
+		{{{isAdminEditorCSS user}}}
+
+		{{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		//- Safely remove this block if you are not targeting IE8 --}}
+		<!--[if lt IE 9]>
+			<script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js"></script>
+			<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<style>
+			/* only for DESKTOP or MOBILE */
+					/* pomocí id=div-desktop / id=div-mobile */
+				@media screen and (min-width: 0px) and (max-width: 900px) {
+				#div-mobile {    display: inline;;  }
+				#div-desktop {    display: none;  }
+			}
+
+				@media screen and (min-width: 901px) and (max-width: 3000px) {
+				#div-mobile {    display: none;  }
+				#div-desktop {    display: inline;;  }
+			}
+		</style>
+
+	</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- ====================================
+  ——— HEADER
+  ===================================== -->
+		<header id="pageTop" class="header-wrapper">
+			<!-- průžkovaná lišta -->
+			<div class="container-fluid color-bar top-fixed clearfix">
+				<div class="row">
+					<div class="col-sm-1 col-xs-2 bg-color-1">fix bar</div>
+					<div class="col-sm-1 col-xs-2 bg-color-2">fix bar</div>
+					<div class="col-sm-1 col-xs-2 bg-color-3">fix bar</div>
+					<div class="col-sm-1 col-xs-2 bg-color-4">fix bar</div>
+					<div class="col-sm-1 col-xs-2 bg-color-5">fix bar</div>
+					<div class="col-sm-1 col-xs-2 bg-color-6">fix bar</div>
+					<div class="col-sm-1 bg-color-1 hidden-xs">fix bar</div>
+					<div class="col-sm-1 bg-color-2 hidden-xs">fix bar</div>
+					<div class="col-sm-1 bg-color-3 hidden-xs">fix bar</div>
+					<div class="col-sm-1 bg-color-4 hidden-xs">fix bar</div>
+					<div class="col-sm-1 bg-color-5 hidden-xs">fix bar</div>
+					<div class="col-sm-1 bg-color-6 hidden-xs">fix bar</div>
+				</div>
+			</div>
+ <!-- ================================================================== -->
+
+			<!-- NAVBAR -->
+			<nav id="menuBar" class="navbar navbar-default lightHeader" role="navigation">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bootstrap mabar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+            </button>
+					<!-- 	<a class="navbar-brand" href="/"><img src="assets/img/logo_helfil.png" alt="MUDr. Helena Filová"></a>
+					-->
+					<a class="nav-link" href="/">
+						<div id="div-desktop" class="schoolInfo navbar-brand" style="width: 320px">
+							<h2 style="margin-bottom:-10px">MUDr. Helena Filová</h2>
+							<h2 style="font-size:20px; text-transform: none; margin:0px">Praktická lékařka pro děti a dorost</h2>
+						</div>
+					</a>
+					<a class="nav-link" href="/">
+						<div id="div-mobile" class="schoolInfo navbar-brand">
+							<a class="navbar-brand" href="/"><img src="assets/img/logo_helfil.png" alt="MUDr. Helena Filová"></a>
+						</div>
+					</a>
+
+				  </div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse navbar-ex1-collapse">
+
+
+						<ul class="nav navbar-nav navbar-right">
+
+							<li class="nav-item color-1 active">
+							 		<a class="nav-link" href="/">
+										<i class="fa fa-home bg-color-1" aria-hidden="true"></i>
+										<span class="active">Domů</span>
+									</a>
+							</li>
+
+							<!-- desktpp -->
+							<li id="div-desktop" class="nav-item color-3 active" style="width:150px">
+								<a class="nav-link" href="/pageOrdinace">
+									<i class="fa fa-list-ul bg-color-3" aria-hidden="true"></i>
+									<span class="active" style="width:150px">Ordinační hodiny</span>
+								</a>
+							</li>
+							<!-- mobile -->
+							<li id="div-mobile" class="nav-item color-3 active">
+								<a class="nav-link" href="/pageOrdinace">
+									<i class="fa fa-list-ul bg-color-3" aria-hidden="true"></i>
+									<span class="active">Ord. hodiny</span>
+								</a>
+							</li>
+
+
+							<li class="dropdown singleDrop color-2 active">
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+									<i class="fa fa-file-text-o bg-color-2" aria-hidden="true"></i> <span>Informace</span></a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li class=""><a href="/pageCenik">Ceník výkonů</a></li>
+                  <li class=""><a href="/pageOckovani">Očkovací kalendář</a></li>
+									<li class=""><a href="/pageSoubory">Soubory ke stažení</a></li>
+                  <li class=" "><a href="/pageGdpr">GDPR - zpracování os. údajů</a></li>
+                </ul>
+              </li>
+
+							<li class="nav-item color-4 active">
+									<a class="nav-link" href="/gallery">
+										<i class="fa fa-picture-o bg-color-4" aria-hidden="true"></i>
+										<span class="active">Fotogalerie</span>
+									</a>
+							</li>
+							<li class="nav-item color-5 active">
+									<a class="nav-link" href="/contact">
+											<i class="fa fa-calendar bg-color-5" aria-hidden="true"></i>
+										<span class="active">Kontakt</span>
+									</a>
+							</li>
+							<li class="nav-item color-6 active">
+							    <a class="nav-link" href="/pageOnas">
+										<i class="fa fa-gg bg-color-6" aria-hidden="true"></i>
+										<span class="active">O nás</span>
+									</a>
+							</li>
+						</ul>
+
+		</div>
+	</nav>
+
+		<div id="body">
+			<!--
+				Flash messages allow you to display once-off status messages to users, e.g. form
+				validation errors, success messages, etc
+			-->
+			{{#if messages}}
+			<div id="flash-messages" class="container">
+				{{#if messages.info}}
+				<div class="alert alert-info">
+						{{{flashMessages messages.info}}}
+				</div>
+				{{/if}}
+				{{#if messages.success}}
+				<div class="alert alert-success">
+						{{{flashMessages messages.success}}}
+				</div>
+				{{/if}}
+				{{#if messages.warning}}
+				<div class="alert alert-warning">
+						{{{flashMessages messages.warning}}}
+				</div>
+				{{/if}}
+				{{#if messages.error}}
+				<div class="alert alert-danger">
+						{{{flashMessages messages.error}}}
+				</div>
+				{{/if}}
+			</div>
+			{{/if}}
+			<!-- The content block should contain the body of your template's content-->
+			{{{body}}}
+		</div>
+
+<!-- ====================================
+——— FOOTER
+===================================== -->
+    <footer>
+      <!-- COLOR BAR -->
+      <div class="container-fluid color-bar clearfix">
+        <div class="row">
+          <div class="col-sm-1 col-xs-2 bg-color-1">fix bar</div>
+          <div class="col-sm-1 col-xs-2 bg-color-2">fix bar</div>
+          <div class="col-sm-1 col-xs-2 bg-color-3">fix bar</div>
+          <div class="col-sm-1 col-xs-2 bg-color-4">fix bar</div>
+          <div class="col-sm-1 col-xs-2 bg-color-5">fix bar</div>
+          <div class="col-sm-1 col-xs-2 bg-color-6">fix bar</div>
+          <div class="col-sm-1 bg-color-1 hidden-xs">fix bar</div>
+          <div class="col-sm-1 bg-color-2 hidden-xs">fix bar</div>
+          <div class="col-sm-1 bg-color-3 hidden-xs">fix bar</div>
+          <div class="col-sm-1 bg-color-4 hidden-xs">fix bar</div>
+          <div class="col-sm-1 bg-color-5 hidden-xs">fix bar</div>
+          <div class="col-sm-1 bg-color-6 hidden-xs">fix bar</div>
+        </div>
+      </div>
+
+
+      <!-- COPY RIGHT -->
+      <div class="copyRight clearfix">
+				<div class="container">
+							<div class="row">
+								<div class="col-md-4 col-xs-12 col-sm-4" style="text-align:center">
+										<p>Power by KeystoneJS <br>
+											© 2016 Copyright Kidz Bootstrap Template by <a href="https://www.iamabdus.com/">Abdus</a>.
+										</p>
+								</div>
+							  <div class="col-md-4 col-xs-12 col-sm-4" style="text-align:center">
+										<b><a href="/keystone">Administrace</a></b><br>
+										{{#if user}}
+										<a href="/keystone/signout">Odhlásit se</a>
+										{{else}}
+										<a href="/keystone/signin">Přihlásit se</a>
+										{{/if}}<br>
+								</div>
+							  <div class="col-md-4 col-xs-12 col-sm-4" style="text-align:center">
+										<b>Vytvořil:</b>
+											Petr Janoš<br>
+											petr.janos@skaut.cz<br>
+								</div>
+							</div>
+					</div>
+      </div>
+    </footer>
+<!-- /FOOTER -->
+
+		{{!--
+			//- jQuery 1.11.3 is included by default, and required by both Bootstrap
+			//- and the KeystoneJS Content Editor. If you are not targeting IE8,
+			//- you can upgrade to 2.1.4 (also bundled) for better performance.
+		--}}
+		<script src="/js/jquery/jquery-1.11.3.min.js"></script>
+		{{!--
+			//- Customise which Bootstrap javascript files are served by including
+			//- them specifically here, instead of bootstrap-3.3.5.min.js
+		--}}
+		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
+		{{{isAdminEditorJS user}}}
+
+
+		    <script src="assets/plugins/jquery/jquery-min.js"></script>
+		    <script src="assets/plugins/jquery-ui/jquery-ui.js"></script>
+		    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+		    <script src="assets/plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+		    <script src="assets/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+		    <script src="assets/plugins/selectbox/jquery.selectbox-0.1.3.min.js"></script>
+		    <script src="assets/plugins/owl-carousel/owl.carousel.js"></script>
+		    <script src="assets/plugins/waypoint/waypoints.min.js"></script>
+		    <script src="assets/plugins/counter-up/jquery.counterup.min.js"></script>
+		    <script src="assets/plugins/isotope/isotope.min.js"></script>
+		    <script src="assets/plugins/fancybox/jquery.fancybox.min.js"></script>
+		    <script src="assets/plugins/isotope/isotope-triger.js"></script>
+		    <script src="assets/plugins/countdown/jquery.syotimer.js"></script>
+		    <script src="assets/plugins/velocity/velocity.min.js"></script>
+		    <script src="assets/plugins/smoothscroll/SmoothScroll.js"></script>
+		    <script src="assets/plugins/wow/wow.min.js"></script>
+		    <script src="assets/js/app.js"></script>
+	</body>
+</html>

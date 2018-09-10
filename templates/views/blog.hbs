@@ -29,8 +29,8 @@
       					{{#if image}}<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img pull-right">{{/if}}
       					<p>{{{content.brief}}}</p>
                 <br>
-      					{{#if content.extended}}<p class="read-more" style="text-align: right"><b><a href="{{postUrl slug}}">
-                  <br><i class="fa fa-angle-double-right" aria-hidden="true"></i>Číst více</a></b></p>{{/if}}
+      					{{#if content.extended}}<p class="read-more" style="text-align: left"><b><a href="{{postUrl slug}}">
+                  <br><i class="fa fa-angle-double-right" aria-hidden="true"></i>Číst více</a></b></p><br><br><br><br>{{/if}}
 
 
               </div>
@@ -38,6 +38,8 @@
       		</div>
       	</div>
       	{{>pagination}}
+        <iframe style="float:right; margin-top:20px" src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fwww.helenafilova.cz%2Fblog&layout=button&size=large&mobile_iframe=true&appId=1265809760195337&width=73&height=28" width="73" height="25" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
       </div>
 
   </section>
