@@ -354,17 +354,6 @@
 
 
 	<script>
-	var string = $('.str').text();
-	var str50 = string.substr(0,50)
-	$('.str').html(str50+'...'+'<a class="readmore" href="/pageOrdinace">readmore</a>');
-	$('.str').attr('data-text',string);
-
-	$('.readmore').click(function(e)
-	{
-	    e.preventDefault();
-	    $(this).parent().html($(this).parent().attr('data-text'))
-
-	})
 
 
 	document.addEventListener('DOMContentLoaded', function() {
@@ -417,4 +406,16 @@
 				document.getElementById("den").innerHTML = n;
 		}
 	}, false);
+
+	var string = $('.str').text();
+	var str50 = string.substr(0,50)
+	$('.str').html(str50+'...'+'<a class="readmore" href="/pageOrdinace">readmore</a>');
+	$('.str').attr('data-text',string);
+
+	$('.readmore').click(function(e)
+	{
+			e.preventDefault();
+			$(this).parent().html($(this).parent().attr('data-text'))
+
+	});
 	</script>
