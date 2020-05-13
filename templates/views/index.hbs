@@ -178,7 +178,7 @@
 						<a href="/pageOrdinace" class="sectionLink bg-color-1">
 							<i class="fa fa-file-text-o linkIcon border-color-1" aria-hidden="true"></i>
 							<p style="padding-top:55px; font-size: 20px; color:white"><b>AKTUÁLNÍ INFORMACE</b></p>
-							<p class="str"> {{{ ordinace.aktualniInformace }}}</p>
+							<p> {{{ ordinace.aktualniInformace }}}</p>
 						</a>
 					</div>
 
@@ -407,15 +407,4 @@
 		}
 	}, false);
 
-	var string = $('.str').text();
-	var str50 = string.substr(0,50)
-	$('.str').html(str50+'...'+'<a class="readmore" href="/pageOrdinace">readmore</a>');
-	$('.str').attr('data-text',string);
-
-	$('.readmore').click(function(e)
-	{
-			e.preventDefault();
-			$(this).parent().html($(this).parent().attr('data-text'))
-
-	});
 	</script>
