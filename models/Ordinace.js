@@ -10,7 +10,7 @@ var Ordinace = new keystone.List('Ordinace', {
 
 Ordinace.add({
   title: {type: String, requried: true},
-  aktualniInformace: {type: Types.Html, wysiwyg: true, height: 100, max: 140, requried: true},
+  aktualniInformace: {type: Types.Html, wysiwyg: true, height: 100, requried: true},
   dovolenaPopis: {type: Types.Html, wysiwyg: true, height: 100, requried: true},
 
   pondeliDopoledne: {type: String,requried: true},
