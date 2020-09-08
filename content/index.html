@@ -100,30 +100,30 @@
             <div class="row">
 
                 <div class="col-sm-3">
-                    <a href="/pageOrdinace" class="sectionLink bg-color-1">
+                    <a href="kontakt.php" class="sectionLink bg-color-1">
                         <i class="fa fa-file-text-o linkIcon border-color-1" aria-hidden="true"></i>
-                        <p style="padding-top:55px; font-size: 20px; color:white"><b>AKTUÁLNÍ INFORMACE</b></p>
-                        <p></p>
+                        <p style="padding-top:55px; font-size: 20px; color:white"><b>Aktuální informace</b></p>
+                        <p><i>nutné se předem objednat</i></p>
                     </a>
                 </div>
 
                 <div class="col-sm-3 ">
-                    <a href="/pageOrdinace" class="sectionLink bg-color-2" id="teamLink">
+                    <a href="kontakt.php" class="sectionLink bg-color-2" id="teamLink">
                         <i class="fa fa-gg linkIcon border-color-2" aria-hidden="true"></i>
-                        <p style="padding-top:55px; font-size: 20px; color:white"><b>DOVOLENÁ</b></p>
-                        <p></p>
+                        <p style="padding-top:55px; font-size: 20px; color:white"><b>Beseda pro budoucí maminky</b></p>
+                        <p><i>není plánovaná žádná beseda</i></p>
                     </a>
                 </div>
 
                 <div class="col-sm-3 ">
-                    <a href="/pageOrdinace" class="sectionLink bg-color-3" id="teamLink">
+                    <a href="kontakt.php" class="sectionLink bg-color-3" id="teamLink">
                         <i class="fa fa-gg linkIcon border-color-3" aria-hidden="true"></i>
-                        <p style="padding-top:55px; font-size: 20px; color:white"><b>ORDINAČNÍ HODINY</b></p>
+                        <p style="padding-top:55px; font-size: 20px; color:white; padding-bottom: 0px; margin-bottom: 0px;"><b>Ordinační hodiny</b></p>
                         <!-- <p style="font-size: 10px; margin:0px; color: white;"><b>prázdninová ordinační doba<b></p> -->
-                        <p style="font-size: 17px; margin:10px" id="den"></p>
-                        <p style="font-size: 20px; margin:0px" id="dopol"></p>
-                        <p style="font-size: 15px; margin:0px"><b>Jen objednaní:<b></p>
-                        <p style="font-size: 20px" id="odpol"></p>
+                        <p style="font-size: 14px; margin:5px; color: lightgrey;"><b>Nemocní</b>:</b></p>
+                        <p style="font-size: 18px; margin:0px; color:white" id="dopol"></p>
+                        <p style="font-size: 14px; margin:5px; color: lightgrey;"><b>Objednaní:</b></p>
+                        <p style="font-size: 18px; color: white;" id="odpol"></p>
                     </a>
                 </div>
 
@@ -290,6 +290,12 @@
 
 
 <script>
+    var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = mm + '/' + dd + '/' + yyyy;
 
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -297,11 +303,11 @@
             var d = new Date();
             var weekday = new Array(7);
             weekday[0] = "Dnes se neordinuje.";
-            weekday[1] = "7:30 - 11:00 nemocní";
-            weekday[2] = "7:30 - 11:00 nemocní";
-            weekday[3] = "7:30 - 11:00 nemocní";
-            weekday[4] = "12:00 - 14:00 nemocní";
-            weekday[5] = "7:30 - 11:00 nemocní";
+            weekday[1] = "7:30 - 11:00";
+            weekday[2] = "7:30 - 11:00";
+            weekday[3] = "7:30 - 11:00";
+            weekday[4] = "12:00 - 14:00";
+            weekday[5] = "7:30 - 11:00";
             weekday[6] = "Dnes se neordinuje.";
 
             var n = weekday[d.getDay()];
@@ -330,13 +336,13 @@
         {
             var d = new Date();
             var weekday = new Array(7);
-            weekday[0] = "<b>NEDĚLE<b>";
-            weekday[1] = "<b>PONDĚLÍ<b>";
-            weekday[2] = "<b>ÚTERÝ<b>";
-            weekday[3] = "<b>STŘEDA<b>";
-            weekday[4] = "<b>ČTVRTEK<b>";
-            weekday[5] = "<b>PÁTEK<b>";
-            weekday[6] = "<b>SOBOTA<b>";
+            weekday[0] = "<b>Neděle<b>";
+            weekday[1] = "<b>Pondělí<b>";
+            weekday[2] = "<b>Úterý";
+            weekday[3] = "<b>Středa<b>";
+            weekday[4] = "<b>Čtvrtek<b>";
+            weekday[5] = "<b>Pátek<b>";
+            weekday[6] = "<b>Sobota<b>";
 
             var n = weekday[d.getDay()];
             document.getElementById("den").innerHTML = n;
