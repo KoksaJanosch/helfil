@@ -1,0 +1,19 @@
+	/* only for DESKTOP or MOBILE */
+			/* pomocí id=div-desktop / id=div-mobile */
+		@media screen and (min-width: 0px) and (max-width: 750px) {
+		#div-mobile {    display: inline;;  }
+		#div-desktop {    display: none;  }
+    #div-middle {    display: none;  }
+	}
+
+		@media screen and (min-width: 991px) and (max-width: 3000px) {
+		#div-mobile {    display: none;  }
+		#div-desktop {    display: inline;;  }
+    #div-middle {    display: none;  }
+	}
+
+  @media screen and (min-width: 751px) and (max-width: 990px) {
+  #div-mobile {    display: none;  }
+  #div-desktop {    display: none;;  }
+  #div-middle {    display: inline;  }
+}
