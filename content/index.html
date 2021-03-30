@@ -91,6 +91,7 @@
     </div>
 </section>
 
+
 <!--====================================
 	——— 4 SEKCE
 	===================================== -->
@@ -149,12 +150,63 @@
             </div>
         </div>
     </div>
+
+    
+    <!-- The Modal -->
+ 
+
+    <div id="myModal" class="modal">
+    
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+                    <p><b style="font-size: 20px;">PROVÁDÍME ANTIGENNÍ TESTY</b></p>
+                        <hr style="height:4px; border-width:0; background-color: #EA7062">
+
+            <div class="row">
+                <div class="col-md-9">
+                        <p style="font-size: 16px;">
+                            Provádíme antigenní testy stěrem z nosu
+                            (testy jsou šetrné, stírá se jen nosní vchod, aby byly šetrné pro malé děti).
+                        </p>
+   
+                <ul style="font-size: 16px;">
+                    <li>» testování je <b>zdarma</b></li>
+                    <li>» může přijít <b>kdokoliv</b>, klidně i rodiče nebo jiní rodinní příslušníci</li>
+                    <li>» tuto službu poskytujeme i pacientům, kteří jsou <b>registrovaní jinde</b></li>
+                </ul>
+                <p>
+                    <br>
+                    <b>Pondělí, úterý, pátek:</b> 12-13 hodin
+                    <br>
+                    <b>Čtvrtek:</b> 15-16 hodin
+                </p>
+            </div>
+
+            <div class="col-md-3">
+                <img style="width:150px; padding: 15px; margin:0 auto; display:block;" src="https://www.flaticon.com/svg/vstatic/svg/3159/3159741.svg?token=exp=1617139540~hmac=a4ebfbc75a7ce52a62e296003efb4f7a" alt="covid">
+            </div>
+
+        </div>
+
+
+
+
+        </div>
+    
+   
+        </div>
+
 </section>
+
+
+
 
 <!--====================================
 	——— FEATURE SECTION
 	===================================== -->
 <section class="mainContent full-width clearfix featureSection">
+
     <div class="container">
         <div class="sectionTitle text-center ">
             <h2 class="wow fadeInUp">
@@ -368,5 +420,39 @@
             document.getElementById("den").innerHTML = n;
         }
     }, false);
-
 </script>
+
+<script>
+    // Get the modal
+
+        var modal = document.getElementById("myModal");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal 
+        window.onload = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+</script>
+
+<!-- 
+<script>
+    window.onload = function () {
+        document.getElementById("testy").style.display = "block";
+    };
+</script>
+
+-->
